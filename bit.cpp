@@ -32,8 +32,8 @@ int main()
 	*v=0;
 	int n=4000,i;//c is 2kT/Dt, n the number of lattice points, dl the space between two lattice points, g=Gamma(x), v=Gamma'(x),errmin is the maximal error in the shooting algorithm.
 	double c=4.0,err=1.0,errmin=0.000001,errmin0=errmin,l,dl=(xmax-xmin)/((double)n),xtar,v0=(*v),dv=0.01,test1=1.0,test2,eps=0.25,eps2=1-eps;
-	FILE*filv1=fopen("optimal.txt","w");//fist column: t, second column: position, third column: V(x,t) for optimal protocol, fourth column: p(x,t) for optimal protocol
-	FILE *fil2=fopen("leq.txt","w");//fist column: t, second column: position, third column: V(x,t) for optimal local-equilibrium protocol, fourth column: p(x,t) for optimal local-equilibrium protocol
+	FILE*filv1=fopen("optimal.txt","w");//first column: t, second column: position, third column: V(x,t) for optimal protocol, fourth column: p(x,t) for optimal protocol
+	FILE *fil2=fopen("leq.txt","w");//first column: t, second column: position, third column: V(x,t) for optimal local-equilibrium protocol, fourth column: p(x,t) for optimal local-equilibrium protocol
 	double*bol=boltzdis(n,xmin,xmax);
 	double* path=(double*)malloc(n*sizeof(double));//path is gamma(x)
 	int jb=-1,j;
